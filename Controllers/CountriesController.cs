@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ClassPopulacao;
 using PopulacaoAPI.Data;
+using Microsoft.AspNetCore.Cors;
 
 namespace PopulacaoAPI.Controllers
 {
@@ -21,6 +22,7 @@ namespace PopulacaoAPI.Controllers
             _context = context;
         }
 
+        [DisableCors]
         // GET: api/Countries
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Country>>> GetCountry()
