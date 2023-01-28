@@ -15,5 +15,6 @@ namespace PopulacaoAPI.Data
         }
 
         public DbSet<ClassPopulacao.Country> Country { get; set; } = default!;
+        public DbSet<ClassPopulacao.City> City { get; set; } = default!;
     }
 }

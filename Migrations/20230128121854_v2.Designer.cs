@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PopulacaoAPI.Data;
 
@@ -10,9 +11,11 @@ using PopulacaoAPI.Data;
 namespace PopulacaoAPI.Migrations
 {
     [DbContext(typeof(PopulacaoAPIContext))]
-    partial class PopulacaoAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20230128121854_v2")]
+    partial class v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
